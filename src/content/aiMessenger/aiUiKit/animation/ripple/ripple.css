@@ -1,0 +1,62 @@
+.pond {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.pondImg {
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  animation: rippleImg 24s infinite ease-in-out;
+}
+
+.square-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--green);
+  transform: translate(-50%, -50%) scale(0.1);
+  border-radius: 2px;
+  border-bottom-left-radius: 1px;
+  opacity: 0;
+  animation: ripple 3s infinite ease-out;
+}
+.square-ripple.delay {
+  animation-delay: 1.5s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(6);
+    opacity: 0;
+  }
+}
+
+@keyframes rippleImg {
+  0% {
+    
+    opacity: 0;
+  }
+  33.3% {
+    opacity: 0.5;
+  }
+  66.6%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

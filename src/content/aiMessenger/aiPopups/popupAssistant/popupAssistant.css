@@ -1,0 +1,239 @@
+.popupAssistant {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  z-index: 3;
+}
+.popupAssistantContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 300px;
+  background-color: var(--bordersOpacity);
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+}
+.popupSettingsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 80%;
+  height: 90%;
+  background-color: var(--borders);
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+}
+
+.popupAssistantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--green);
+}
+
+.popupAssistantHeaderTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.popupAssistantHeaderClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  cursor: pointer;
+}
+
+.popupAssistantBody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 5px;
+}
+
+.popupAssistantBodyBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+}
+.popupAssistantBodyBlockPicture {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.popupAssistantBodyBlockAvatarImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popupAssistantBodyBlockAddPhotoCancel{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  cursor: pointer;
+}
+
+.popupAssistantBodyBlockAddPhoto {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  overflow: hidden;
+  cursor: pointer;
+}
+.popupAssistantBodyBlockAddPhotoIcon {
+  font-size: 2.5rem;
+  color: var(--borders);
+}
+
+
+.popupAssistantBodyBlockTextarea {
+  width: 95%;
+  height: 90px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  resize: none;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.popupAssistantBodyBlockTextarea::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+.popupAssistantBodyBlockTextarea::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 10px;
+}
+
+
+
+
+
+.popupAssistantBodyBlockTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.popupAssistantBodyBlockText {
+  color: var(--gray);
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+.popupAssistantBodyBlockLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.popupAssistantBodyBlockInput{
+  width: 200px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+}
+
+
+
+.popupAssistantButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid var(--green);
+}
+
+.popupAssistantButton {
+  min-width: 70px;
+  min-height: 30px !important;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, var(--borders), var(--bg));
+  color: var(--gray);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+
+

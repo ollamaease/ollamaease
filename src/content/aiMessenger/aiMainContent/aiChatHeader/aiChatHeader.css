@@ -1,0 +1,306 @@
+.chatAiMessengerModelSelected {
+  display: none;
+}
+.chatAiMessengerModelSelected.done {
+  display: flex;
+}
+
+.chatAiMessengerHeaderBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 35px;
+  padding: 0 5px;
+  border-radius: 10px;
+  border: 2px solid var(--borders);
+  cursor: pointer;
+  box-shadow: inset 0px 0px 7px 3px var(--bordersOpacity);
+}
+
+.chatAiMessengerHeaderBtn:hover {
+  cursor: pointer;
+  border-color: var(--gray);
+  background-color: var(--borders);
+}
+
+.chatAiMessengerHeaderBtnText {
+  font-size: 0.625rem;
+  color: var(--gray);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15lvh;
+  gap: 10px;
+  height: 55lvh;
+  margin-bottom: 15lvh;
+}
+
+.progressBarContainer {
+  width: 100%;
+  background-color: var(--borders);
+  border-radius: 8px;
+  height: 16px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.progressBarContainer.done {
+  display: none;
+}
+
+.statusText {
+  display: flex;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: var(--green);
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  max-width: 230px;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.statusText.done {
+  display: none;
+}
+.statusText.error {
+  color: var(--red);
+}
+.statusTextAbsolute {
+  position: absolute;
+  top: 22lvh;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  animation: hideText 17s ease-in-out forwards;
+}
+.errorMessageHide {
+  animation: hideText 17s ease-in-out forwards;
+}
+
+.responseContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  max-width: 320px;
+  gap: 10px;
+  line-height: 1.5;
+}
+.responseTextError {
+  color: var(--red);
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: center;
+}
+.responseText {
+  font-size: 0.875rem;
+  color: var(--green);
+  font-weight: 600;
+  word-wrap: break-word;
+  text-align: center;
+  /* text-transform: uppercase; */
+}
+
+.responseTextServerError {
+  font-size: 0.875rem;
+  color: var(--orange);
+  font-weight: 600;
+  text-align: center;
+  font-style: normal;
+}
+
+.responseText span {
+  color: var(--main) !important;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: 600;
+  /* border-bottom: 1px solid var(--main); */
+}
+
+.responseContainer span {
+  color: var(--green);
+}
+.responseTextCode {
+  background-color: var(--borders);
+  border-radius: 5px;
+  padding: 0px 0px 10px 0px;
+  border: 2px solid var(--gray);
+  margin: 10px auto;
+}
+.responseTextCodeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  width: 100%;
+  height: 25px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.responseTextCode code {
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 5px;
+}
+
+.responseTextRefresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.responseTextFileName {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.chatAiMessengerHeaderTitleOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.chatAiMessengerHeroAvatar,
+.chatAiMessengerErrorUnableToLoad {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  animation: pulseHero 30s infinite ease-in-out;
+}
+
+.progressBarContainerLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.progressBarContainerLineText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.625rem;
+  line-height: 1;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.progressBarContainerBtnModelContext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.progressBarContainerBtnModelContext:hover {
+  filter: drop-shadow(0 0 5px var(--shadowBlack));
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--green);
+  transition: width 0.3s ease;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.progressBar.error {
+  background-color: var(--red);
+  animation: none;
+}
+
+.progressBar.done {
+  animation: none;
+}
+
+.chatAiMessengerHeaderDownloadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  width: 95%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--borders);
+  box-shadow: inset 0 0 7px 3px var(--bordersOpacity);
+  color: var(--text);
+  font-weight: 400;
+  padding: 3px 15px;
+  cursor: pointer;
+}
+
+@keyframes hideText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulseHero {
+  0% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: drop-shadow(0px 0px 12px var(--shadowBlack)) saturate(100%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: drop-shadow(0px 0px 3px var(--shadowBlack)) saturate(500%);
+    transform: scale(1.1) translate(-50%, -50%);
+  }
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: drop-shadow(0px 0px 12px var(--shadowBlack)) saturate(100%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+}

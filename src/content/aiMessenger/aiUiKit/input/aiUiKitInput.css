@@ -1,0 +1,26 @@
+.aiUiKitInput {
+    border-bottom: 1px groove var(--borders);
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    width: 220px;
+    height: 30px;
+}
+.formInput{
+    border: 1px solid var(--borders);
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: var(--text);
+    width: 200px;
+    height: 30px;
+}
+.formInputRadio{
+    border: 1px solid var(--borders);
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: var(--text);
+    width: 20px;
+    height: 20px;
+}

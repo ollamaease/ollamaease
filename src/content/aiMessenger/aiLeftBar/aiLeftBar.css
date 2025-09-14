@@ -1,0 +1,125 @@
+.aiLeftBar {
+  position: relative;
+  margin: 15px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  height: 90%;
+}
+
+.aiLeftBar.extended{
+  display: none;
+}
+
+.aiLeftBarHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.aiLeftBarHeaderTitle {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 100%;
+}
+
+.aiLeftBarHeaderSubtitle {
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 100%;
+}
+
+.aiLeftBarBody {
+  position: relative;
+  height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-bottom: 6px double var(--borders);
+  z-index: 6;
+}
+
+.aiLeftBarBody::-webkit-scrollbar {
+  width: 5px;
+}
+
+.aiLeftBarBody::-webkit-scrollbar-track {
+  background: var(--borders);
+}
+
+.aiLeftBarBody::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 10px;
+}
+
+.aiLeftBarBodyModelsItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text);
+  margin: 12px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.aiLeftBarBodyModelsItem:hover {
+  color: var(--green);
+  border-color: var(--green);
+  background-color: var(--greenOpacityBg);
+}
+
+.aiLeftBar .aiLeftBarBodyCount {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-radius: 50%;
+  border-top: 6px double var(--borders);
+  background-color: var(--bg);
+  padding: 5px 2px 5px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.aiLeftBarAddBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 35px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: 2px solid var(--borders);
+  cursor: pointer;
+  box-shadow: inset 0px 0px 7px 3px var(--bordersOpacity);
+  margin-bottom: 7px;
+}
+
+.aiLeftBarAddBtn:hover {
+  cursor: pointer;
+  border-color: var(--gray);
+  background-color: var(--borders);
+}

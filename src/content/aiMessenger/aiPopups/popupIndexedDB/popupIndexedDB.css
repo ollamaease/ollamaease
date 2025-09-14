@@ -1,0 +1,433 @@
+.popupIndexedDB {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  color: var(--gray);
+  z-index: 4;
+}
+.popupIndexedDBView {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  max-height: 90%;
+  background-color: var(--borders);
+  color: var(--gray);
+  border-radius: 10px;
+  border-top: 4px double var(--shadowBlack);
+  border-bottom: 4px double var(--shadowBlack);
+  box-shadow: 0px 0px 5px 1px var(--shadowBlack);
+  z-index: 4;
+}
+
+.popupIndexedDBContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  max-height: 90%;
+  background-color: var(--bordersOpacity);
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+}
+
+.popupIndexedDBHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  border-bottom: 2px solid var(--green);
+}
+
+.popupIndexedDBBody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 10px;
+  width: 100%;
+  gap: 15px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.popupIndexedDBBody::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--borders);
+  border-radius: 5px;
+}
+.popupIndexedDBBody::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.popupIndexedDBHeaderClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0px 0px 3px var(--shadowBlack));
+  cursor: pointer;
+}
+
+.popupIndexedDBBodyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  gap: 10px;
+}
+
+.popupIndexedDBBodyItemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.popupIndexedDBBodyTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--green);
+  margin-top: 15px;
+}
+.popupIndexedDBBodyTitle span {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--gray);
+}
+
+.popupIndexedDBBodyItemValue {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  border-top: 2px dashed var(--gray);
+  padding-bottom: 15px;
+  border-bottom: 2px dashed var(--gray);
+  margin: 5px 0 5px;
+  word-break: break-word;
+}
+
+.popupIndexedDBButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 10px;
+  border-top: 2px solid var(--green);
+  padding-top: 10px;
+}
+
+.innerPopupBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popupIndexedDBButtonLabel {
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+  transition: all 0.3s ease;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 2px solid var(--borders);
+  background-color: transparent;
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+}
+
+.popupIndexedDBButtonLabel:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.025);
+  -webkit-box-shadow: 0px 0px 16px -8px var(--shadowBlack);
+  box-shadow: 0px 0px 16px -8px var(--shadowBlack);
+  color: inherit;
+}
+
+.popupIndexedDBButtonLabel:active {
+  transform: scale(0.97);
+}
+
+.popupIndexedDBBodyItemValue table pre,
+.popupIndexedDBBodyItemValue pre {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  overflow: auto;
+  background-color: var(--bg);
+  border-radius: 5px;
+  padding: 20px 10px;
+  border: 2px solid var(--gray);
+  margin: 10px auto;
+  text-align: left;
+  word-break: break-word;
+}
+
+.popupIndexedDBBodyItemValue pre::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--borders);
+  border-radius: 5px;
+}
+.popupIndexedDBBodyItemValue pre::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.popupIndexedDBBodyItemValue table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 7px 5px var(--bg);
+  word-break: keep-all;
+}
+
+.popupIndexedDBBodyItemValue tr,
+.popupIndexedDBBodyItemValue td,
+.popupIndexedDBBodyItemValue th {
+  border: 1px dashed var(--gray);
+  text-align: left;
+  padding: 5px;
+}
+
+.popupIndexedDBBodyItemValue th {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.innerPopupImageBoxTitle {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--green);
+  margin-top: 15px;
+}
+
+.innerPopupImageBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin: 0 auto;
+  width: 95%;
+  height: 90px;
+  border-radius: 5px;
+  gap: 10px;
+  overflow: auto;
+  box-shadow: 0px 0px 7px 5px var(--bg);
+  -webkit-box-shadow: 0px 0px 7px 5px var(--bg);
+  -moz-box-shadow: 0px 0px 7px 5px var(--bg);
+  border: 3px solid transparent;
+}
+
+.innerPopupImageBox::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--borders);
+  border-radius: 5px;
+}
+.innerPopupImageBox::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.innerPopupImage {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 7px 5px var(--bg);
+  -webkit-box-shadow: 0px 0px 7px 5px var(--bg);
+  -moz-box-shadow: 0px 0px 7px 5px var(--bg); */
+}
+
+.popupIndexedDBViewPreviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 15px;
+}
+.popupIndexedDBViewPreviewFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  border-top: 1px solid var(--text);
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.popupIndexedDBViewPreviewTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--green);
+  margin-top: 15px;
+}
+.popupIndexedDBViewPreviewSystemTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--green);
+  margin-top: 15px;
+}
+
+
+.popupIndexedDBViewPreviewImage {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px 5px var(--bg);
+  -webkit-box-shadow: 0px 0px 7px 5px var(--bg);
+  -moz-box-shadow: 0px 0px 7px 5px var(--bg);
+}
+
+.popupIndexedDBViewPreviewSystem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  border: 1px solid var(--text);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.popupIndexedDBViewPreviewSystemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.popupIndexedDBViewPreviewUser {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 95%;
+  gap: 10px;
+  border: 1px solid var(--text);
+  border-radius: 15px;
+  border-bottom-right-radius: 0px;
+  padding: 10px;
+  margin-left: auto;
+}
+
+.popupIndexedDBViewPreviewUserHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.popupIndexedDBViewPreviewRole span {
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.popupIndexedDBViewPreviewAssistant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 95%;
+  gap: 10px;
+  border: 1px solid var(--text);
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  padding: 10px;
+  margin-right: auto;
+}
+
+.popupIndexedDBViewPreviewAssistantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.popupIndexedDBViewPreviewContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  color: var(--text);
+  white-space: pre-wrap;
+  text-align: justify;
+}
+.popupIndexedDBViewPreviewContent.popupIndexedDBViewPreviewContentReasoning {
+  align-items: flex-start;
+  color: var(--gray);
+  font-style: italic;
+  border-bottom: 2px dashed var(--gray);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.popupIndexedDBViewPreviewContent.popupIndexedDBViewPreviewContentUser {
+  align-items: flex-end;
+}
+.popupIndexedDBViewPreviewContent.popupIndexedDBViewPreviewContentAssistant {
+  align-items: flex-start;
+}

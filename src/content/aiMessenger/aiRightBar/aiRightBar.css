@@ -1,0 +1,211 @@
+.aiRightBarContainer {
+  position: relative;
+  margin: 0px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  height: 91%;
+}
+
+.aiRightBarContainerHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.aiRightBarContainerHeaderTitle {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 100%;
+}
+
+.aiRightBarContainerBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+  width: 275px;
+  padding: 5px 0 15px 0;
+  height: calc(95lvh - 12lvh);
+  overflow-x: hidden;
+  border-bottom: 6px double var(--borders);
+}
+
+.aiRightBarContainerBody::-webkit-scrollbar {
+  width: 5px;
+}
+.aiRightBarContainerBody::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+}
+.aiRightBarContainerBody::-webkit-scrollbar-track {
+  background-color: var(--borders);
+}
+
+.aiRightBarModel,
+.aiRightBarItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--green);
+  margin: 6px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 10px;
+  padding: 15px 10px 0px;
+  box-shadow: inset 0px 0px 7px 3px var(--bordersOpacity);
+}
+.aiRightBarModel{
+  padding: 10px 10px 0px;
+  z-index: 6;
+}
+
+.aiRightBarItem {
+  width: 200px;
+  font-size: 0.75rem;
+  color: var(--gray);
+  padding: 10px 10px 3px;
+  border: 1px solid var(--gray);
+  background-color: var(--bg);
+  margin: 5px auto 11px;
+  
+}
+
+.aiRightBarModel:hover {
+  color: var(--green);
+  border-color: var(--green);
+  background-color: var(--greenOpacityBg);
+}
+
+.aiRightBarItem:hover {
+  color: var(--gray);
+  border-color: var(--gray);
+  background-color: var(--bordersOpacity);
+}
+
+.aiRightBarName,
+.aiRightBarNameCount,
+.aiRightBarItemDate {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  color: var(--green);
+  background-color: var(--bg);
+  padding: 3px 9px 2px;
+  border-radius: 5px;
+  line-height: 1;
+}
+
+.aiRightBarName {
+  top: -9px;
+  left: 20%;
+}
+.aiRightBarNameCount {
+  color: var(--gray);
+  font-weight: 600;
+  top: -9px;
+  left: 90%;
+}
+
+.aiRightBarNameCount.hidden {
+  visibility: hidden;
+}
+
+.aiRightBarItemDate {
+  color: var(--gray);
+  background-color: var(--borders);
+}
+
+.aiRightBarModel:hover .aiRightBarName {
+  color: var(--bg);
+  background-color: var(--green);
+}
+.aiRightBarModel:hover .aiRightBarNameCount {
+  color: var(--bg);
+  background-color: var(--gray);
+}
+
+.aiRightBarItem:hover .aiRightBarItemDate {
+  color: var(--bg);
+  background-color: var(--gray);
+}
+
+.aiRightBarItem:hover .aiRightBarDate {
+  color: var(--bg);
+  background-color: var(--gray);
+}
+
+.aiRightBarModelTitle,
+.aiRightBarItemTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  padding-bottom: 8px;
+}
+
+.aiRightBarItemTitle {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.aiRightBarTitle span {
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.aiRightBarTitle:hover span {
+  visibility: hidden;
+}
+
+.aiRightBarWrapper,
+.aiRightBarItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+}
+.aiRightBarItemWrapper {
+  width: 180px;
+}
+
+.aiRightBarContainer .aiRightBarLeftContainerBodyCount {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-radius: 50%;
+  border-top: 6px double var(--borders);
+  background-color: var(--bg);
+  padding: 5px 15px;
+  z-index: 10;
+}

@@ -1,0 +1,64 @@
+.aiUIKitButton {
+    /* width: 200px; */
+    /* min-height: 40px; */
+    border-radius: 10px;
+    /* background-image: linear-gradient(to bottom right, var(--main), var(--bg)); */
+    /* color: var(--text); */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+/* .buttonAlert {
+    min-height: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, var(--red), var(--bg));
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    transition: all 0.3s ease;
+} */
+
+/* ! TooltipBtn start */
+.tooltip .tooltipBtnText{
+    visibility: hidden;
+    white-space: nowrap;
+
+    background-color: var(--black);
+    color: var(--red);
+    min-width: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px 5px;
+    position: absolute;
+    z-index: 1000;
+    top: 3px;
+    right: 120%;
+  
+  }
+  .tooltip .tooltipBtnText::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 99%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--borders);
+  }
+  .tooltip:hover .tooltipBtnText {
+    visibility: visible;
+  }
+
+/* ! TooltipBtn end */

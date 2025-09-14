@@ -1,0 +1,119 @@
+.popupChangeChat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  z-index: 3;
+}
+.popupChangeChatContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 300px;
+  background-color: var(--bordersOpacity);
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+}
+.popupSettingsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 80%;
+  height: 90%;
+  background-color: var(--borders);
+  box-shadow: 1px 1px 5px 1px var(--shadowBlack);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+}
+
+.popupChangeChatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+}
+.popupChangeChatHeaderClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.popupChangeChatBody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 5px;
+}
+
+.popupChangeChatBodyText {
+  text-align: left;
+}
+
+.popupChangeChatBodyText:nth-child(-n + 2) {
+  text-align: center;
+}
+.popupChangeChatBodyText:nth-child(1) {
+  margin-bottom: 20px;
+}
+.popupChangeChatBodyText:nth-child(2) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.popupChangeChatBodyText b {
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+.popupChangeChatBodyText span {
+  border-bottom: 2px solid var(--orange);
+  margin-left: 10px;
+}
+
+.popupChangeChatButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.popupChangeChatButton {
+  min-width: 70px;
+  min-height: 30px !important;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, var(--borders), var(--bg));
+  color: var(--gray);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
