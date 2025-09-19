@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Ollama Extension",
   "version": "0.4.3",
-  "description": "An extension that helps you talk to your local LLM via the Ollama server.",
+  "description": "A simple, privacy-focused Chrome extension that lets you interact effortlessly with local AI models running via Ollama. It provides a clean user interface for chatting with LLMs directly in your browser --- no external APIs, no cloud, just local intelligence.",
   "background": {
     "service_worker": "assets/background.js"
   },
