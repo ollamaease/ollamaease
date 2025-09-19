@@ -710,7 +710,6 @@ export default function AiMessenger(props) {
   ]);
 
   //! Model list
-  // console.log("Model list", modelList);
   useMemo(() => {
     const getModels = async () => {
       const tagsUrl = `http://localhost:11434/api/tags`;
@@ -729,7 +728,7 @@ export default function AiMessenger(props) {
           setResponse(res.response);
         }
       } catch (err) {
-        console.error("Runtime error 1:", err.message);
+        // console.error("Runtime error 1:", err.message);
         setResponse(`❌ Runtime error: ${err.message}`);
       }
     };

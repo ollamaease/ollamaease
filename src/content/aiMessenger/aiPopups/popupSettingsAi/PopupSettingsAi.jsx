@@ -47,23 +47,23 @@ export default function PopupSettingsAi(props) {
             onClick={() => setShowAssistant(true)}
             name={"Assistant"}
           />
-          <Button
+          {/* <Button
             className="popupSettingsAiBodyButton"
             onClick={() => setShowPromptSettings(true)}
             name={"=Prompt="}
-          />
+          /> */}
           <Button
             className="popupSettingsAiBodyButton"
             onClick={() => setShowModelContext(true)}
             name={"Context"}
           />
-          {showParametersBtn && (
+          {/* {showParametersBtn && (
             <Button
               className="popupSettingsAiBodyButton"
               onClick={() => setShowParameters(true)}
               name={"-Parameters-"}
             />
-          )}
+          )} */}
           <Button
             className="popupSettingsAiBodyButton"
             onClick={() => setShowUpdateModel(true)}
